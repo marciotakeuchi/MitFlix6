@@ -6,6 +6,10 @@ namespace MitFlix6.Models.AccountViewModel
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name ="Usuario")]
+        public string? UserName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name ="E-mail")]
         public string Email { get; set; }

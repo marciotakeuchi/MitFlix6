@@ -38,7 +38,7 @@ namespace MitFlix6.Controllers
             {
                 var user = new ApplicationUser()
                 {
-                    UserName = model.Email,
+                    UserName = model.UserName,
                     Email = model.Email
                 };
 
@@ -84,7 +84,7 @@ namespace MitFlix6.Controllers
 
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.Rememberme, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.Rememberme, lockoutOnFailure: false);
 
                 if (result.Succeeded)
                 {

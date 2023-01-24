@@ -6,8 +6,8 @@ namespace MitFlix6.Models.AccountViewModel
     public class LoginViewModel
     {
         [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Usuario")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
